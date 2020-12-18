@@ -1,0 +1,148 @@
+// Flexbox
+//
+// Sass @mixin's for css flexbox properties. Guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+//
+// Styleguide: tools.flexbox
+
+// Flexbox Container
+//
+// Container mixins
+//
+// Styleguide: tools.flexbox.container
+
+// flex();
+//
+// Styleguide: tools.flexbox.container.1-flex
+@mixin flex(){
+  display:                      -webkit-box;
+  display:                      -moz-box;
+  display:                      -ms-flexbox;
+  display:                      -webkit-flex;
+  display:                      flex;
+}
+
+// flex-inline()
+//
+// Styleguide: tools.flexbox.container.2-flex-inline
+@mixin flex-inline(){
+  display:                      -webkit-inline-box;
+  display:                      -moz-inline-box;
+  display:                      -ms-inline-flexbox;
+  display:                      -webkit-inline-flex;
+  display:                      inline-flex;
+}
+
+// flex-direction($method)
+//
+// Direction in which the items are aligned.
+//
+// $method - Valid CSS parameters: row | row-reverse | column | column-reverse
+//
+// Styleguide: tools.flexbox.container.3-flex-direction
+@mixin flex-direction($method){
+  -webkit-flex-direction:       $method;
+  flex-direction:               $method;
+}
+
+// flex-wrap($method)
+//
+// Wrapping method for items inside of container. CSS default is "nowrap".
+//
+// $method - Valid CSS parameters: nowrap | wrap | wrap-reverse;
+//
+// Styleguide: tools.flexbox.container.4-flex-wrap
+@mixin flex-wrap($method){
+  -webkit-flex-wrap:            $method;
+  flex-wrap:                    $method;
+}
+
+// flex-justify-content($method)
+//
+// Styleguide: tools.flexbox.container.5-flex-justify
+@mixin flex-justify-content($method){
+  -webkit-justify-content:      $method;
+  justify-content:              $method;
+}
+
+// flex-align-items($method)
+//
+// Styleguide: tools.flexbox.container.6-flex-align-items
+@mixin flex-align-items($method){
+  -webkit-align-items:          $method;
+  align-items:                  $method;
+}
+
+// flex-align-content($method)
+//
+// Styleguide: tools.flexbox.container.7-flex-align-content
+@mixin flex-align-content($method){
+  -webkit-align-content:        $method;
+  align-content:                $method;
+}
+
+
+
+// Flexbox Items
+//
+// Items mixins
+//
+// Styleguide: tools.flexbox.items
+
+// flex-set($grow, $shrink, $basis)
+//
+// Styleguide: tools.flexbox.items.1-flex-set
+@mixin flex-set($grow, $shrink, $basis){
+  -webkit-box-flex:             $grow $shrink $basis;
+  -moz-box-flex:                $grow $shrink $basis;
+  -webkit-flex:                 $grow $shrink $basis;
+  -ms-flex:                     $grow $shrink $basis;
+  flex:                         $grow $shrink $basis;
+}
+
+// flex-order($value)
+//
+// Styleguide: tools.flexbox.items.2-flex-order
+@mixin flex-order($value){
+  -webkit-box-ordinal-group:    $value;
+  -moz-box-ordinal-group:       $value;
+  -ms-flex-order:               $value;
+  -webkit-order:                $value;
+  order:                        $value;
+}
+
+// flex-grow($value)
+//
+// Styleguide: tools.flexbox.items.3-flex-grow
+@mixin flex-grow($value){
+  width:                        0;
+  -webkit-flex-grow:            $value;
+  -moz-flex-grow:               $value;
+  -ms-flex-grow:                $value;
+  flex-grow:                    $value;
+}
+
+// flex-shrink($value)
+//
+// Styleguide: tools.flexbox.items.4-flex-shrink
+@mixin flex-shrink($value){
+  -webkit-flex-shrink:          $value;
+  flex-shrink:                  $value;
+}
+
+// flex-basis($value)
+//
+// Styleguide: tools.flexbox.items.5-flex-basis
+@mixin flex-basis($value){
+  -webkit-flex-basis:           $value;
+  -moz-flex-basis:              $value;
+  -ms-flex-basis:               $value;
+  flex-basis:                   $value;
+}
+
+// flex-alignself($method)
+//
+// Styleguide: tools.flexbox.items.6-flex-alignself
+@mixin flex-alignself($method){
+  -webkit-align-self:           $method;
+  align-self:                   $method;
+}

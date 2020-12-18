@@ -1,0 +1,9 @@
+@import 'src/styles/02-tools/index.scss';
+
+.infoCard {
+  border-top: 2px solid rgba(101,143,199,0.63);
+  @include radius(0 0 10px 10px);
+  @include shadow(0, .2rem, .4rem, 0, rgba(181,199,211,0.64));
+  padding: 6rem;
+ // width: 94rem;
+}

@@ -1,0 +1,47 @@
+version: 2.1
+
+orbs:
+  aws-ecr: circleci/aws-ecr@6.5.0
+
+executors:
+  docker_build:
+    machine:
+      docker_layer_caching: true
+
+workflows:
+  build-test-deploy:
+    jobs:
+      - build_test:
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /.*/
+      - aws-ecr/build-and-push-image:
+          executor: docker_build
+          region: AWS_DEFAULT_REGION
+          account-url: AWS_ECR_ACCOUNT_URL
+          repo: ${CIRCLE_PROJECT_REPONAME}
+          tag: "${CIRCLE_TAG},newest"
+          requires:
+            - build_test
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
+jobs:
+  build_test:
+    machine:
+      docker_layer_caching: true
+    steps:
+      - checkout
+      - run: echo "export IMAGE_NAME=$AWS_ECR_ACCOUNT_URL/$CIRCLE_PROJECT_REPONAME" >> $BASH_ENV
+      - run: echo "export TEST_CONTAINER_NAME=$CIRCLE_PROJECT_REPONAME" >> $BASH_ENV
+      - run: $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+      - run: docker build -t ${IMAGE_NAME}:${CIRCLE_SHA1} .
+      - run: docker run -it --env-file .env --name ${TEST_CONTAINER_NAME} ${IMAGE_NAME}:${CIRCLE_SHA1} bash run_tests.sh
+      - run: docker stop ${TEST_CONTAINER_NAME}
+      - run: docker rm ${TEST_CONTAINER_NAME}
+      - run: docker run -it --env-file .env -e CODECOV_TOKEN=${CODECOV_TOKEN} --name ${TEST_CONTAINER_NAME} ${IMAGE_NAME}:${CIRCLE_SHA1} bash run_coverage.sh
+      - run: docker stop ${TEST_CONTAINER_NAME}

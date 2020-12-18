@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  ddxwebsite:
+    container_name: 'ddxwebsite'
+    build:
+      context: .
+    image: 'qlaym/ddxwebsite:newest'
+    command: sh run.sh
+    environment:
+      - ORIGINS=*
+    ports:
+      - 8003:8003
+    volumes:
+      - '.:/usr/src/app'
+    networks:
+      - 'ddx-api-network'  
+
+
+networks:
+  ddx-api-network:    
+    name: "ddx-api-network"

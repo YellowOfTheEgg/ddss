@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'PxGrotesk-Bold';
+  src: url('PxGrotesk-Bold.eot?#iefix') format('embedded-opentype'),  url('PxGrotesk-Bold.otf')  format('opentype'),
+	     url('PxGrotesk-Bold.woff') format('woff'), url('PxGrotesk-Bold.ttf')  format('truetype'), url('PxGrotesk-Bold.svg#PxGrotesk-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

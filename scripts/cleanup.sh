@@ -1,0 +1,6 @@
+docker rmi $(docker images --format '{{.Repository}}:{{.Tag}}'|awk '{print $1}'|grep 'qlaym')
+docker rmi $(docker images --format '{{.Repository}}:{{.Tag}}'|awk '{print $1}'|grep 'node')
+docker rmi $(docker images --format '{{.Repository}}:{{.Tag}}'|awk '{print $1}'|grep 'python')
+docker rmi $(docker images --format '{{.Repository}}:{{.Tag}}'|awk '{print $1}'|grep 'pgadmin')
+docker rmi $(docker images --format '{{.Repository}}:{{.Tag}}'|awk '{print $1}'|grep 'nginx')
+docker rmi $(docker images --format '{{.Repository}}:{{.Tag}}'|awk '{print $1}'|grep 'postgres')

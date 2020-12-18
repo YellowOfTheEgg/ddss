@@ -1,0 +1,105 @@
+@import 'src/styles/02-tools/index.scss';
+
+.diagnosisCard {
+  width: 67.2rem;
+  border: .5px solid rgba(101,143,199,0.59);
+  background-color: white;
+  padding: 1.4rem 0 .8rem 3.2rem;
+  @include radius(15px);
+  @include shadow(0, .2rem, .4rem, 0, rgba(181,199,211,0.64));
+
+  &.redFlag {
+    @include radius(0 15px 15px 0);
+    border-left: solid .9rem var(--acc-col2);
+  }
+
+  .header {
+    @include flex();
+    @include flex-align-items(center);
+    @include flex-justify-content(space-between);
+    height: 6rem;
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+
+    .disease {
+      @include flex();
+      @include flex-align-items(center);
+
+      .index {
+        width: 4.5rem;
+        height: 4.5rem;
+        @include radius(100%);
+        color: var(--acc-col0);
+        border: 2px solid  var(--acc-col0);
+        background-color: rgba(232,161,136,0.13);
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 1.3rem;
+        font-size: 1.6em;
+        line-height: 4.2rem;
+      }
+
+      .name {
+        line-height: 1.9rem;
+        font-weight: bold;
+        letter-spacing: 4px;
+      }
+
+      .code {
+        display: block;
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        color: rgba(15,76,129,0.57);
+      }
+    }
+
+    .confidence {
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      color: rgba(15,76,129,0.57);
+      @include flex();
+      @include flex-direction(column);
+      @include flex-align-items(center);
+      margin-right: 4.9rem;
+
+      ol {
+        @include flex();
+        margin-bottom: .5rem;
+      }
+      
+      .level {
+        width: 2.2rem;
+        height: .7rem;
+        @include radius(3px 2px 2px 2px);
+        background-color: var(--pri-col2);
+        opacity: 0.22;
+
+        &:not(:last-child) {
+          margin-right: 2px;
+        }
+
+        &.active {
+          background-color: var(--acc-col0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .description {
+    line-height: 2rem;
+    margin-right: 7.2rem;
+    padding: 1rem 0 2rem 0;
+  }
+
+  .footer {
+    @include flex();
+    @include flex-justify-content(flex-end);
+    border-top: 1px solid #F2F2F2;
+    padding-top: .9rem;
+    height: 3.2rem;
+    button {
+      margin-right: 6.5rem;
+    }
+  }
+}

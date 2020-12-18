@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Icon_Button_share</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.0875,0.009375 L10.087,7.921375 L18,7.921875 L18,10.171875 L10.087,10.171375 L10.0875,18.009375 L7.8375,18.009375 L7.837,10.171375 L0,10.171875 L0,7.921875 L7.837,7.921375 L7.8375,0.009375 L10.0875,0.009375 Z" id="path-1"></path>
+        <filter x="-77.8%" y="-77.8%" width="255.6%" height="255.6%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.396078431   0 0 0 0 0.560784314   0 0 0 0 0.780392157  0 0 0 0.0974923514 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter x="-59.7%" y="-59.7%" width="219.4%" height="219.4%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.396078431   0 0 0 0 0.560784314   0 0 0 0 0.780392157  0 0 0 0.56326486 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <circle id="path-5" cx="18" cy="18" r="18"></circle>
+    </defs>
+    <g id="Icon_Button_share" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Button/Add/default-2">
+            <g id="Button/share">
+                <g id="Button/Add/default">
+                    <g>
+                        <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="24" cy="24" r="24"></circle>
+                        <g id="Icon_Plus_origin" transform="translate(12.000000, 12.000000)">
+                            <g id="_Fill" transform="translate(3.000000, 3.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Combined-Shape" fill-rule="nonzero"></g>
+                                <g id="Colors/UI/sec-col0" mask="url(#mask-2)" fill="#FFFFFF">
+                                    <g transform="translate(-3.000000, -3.000000)" id="Rectangle">
+                                        <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Button/share-Copy" filter="url(#filter-3)" transform="translate(6.000000, 6.000000)">
+            <g id="Button/dowload-Copy">
+                <g id="Button/Add/default-Copy-2">
+                    <g id="Group" filter="url(#filter-4)">
+                        <mask id="mask-6" fill="white">
+                            <use xlink:href="#path-5"></use>
+                        </mask>
+                        <use id="Oval" fill="#FCFCFC" fill-rule="nonzero" xlink:href="#path-5"></use>
+                        <g id="Colors/Brand/main-col1" mask="url(#mask-6)">
+                            <g transform="translate(-6.000000, -6.000000)" id="Rectangle">
+                                <polygon points="0 0 48 0 48 48 0 48"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="Group-2-Copy-2" transform="translate(12.000000, 12.000000)">
+            <g id="Group">
+                <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+            </g>
+            <g id="ic_share">
+                <g id="Icon-24px">
+                    <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                    <path d="M18,18.08 C17.24,18.08 16.56,18.38 16.04,18.85 L8.91,14.7 C8.96,14.47 9,14.24 9,14 C9,13.76 8.96,13.53 8.91,13.3 L15.96,9.19 C16.5,9.69 17.21,10 18,10 C19.66,10 21,8.66 21,7 C21,5.34 19.66,4 18,4 C16.34,4 15,5.34 15,7 C15,7.24 15.04,7.47 15.09,7.7 L8.04,11.81 C7.5,11.31 6.79,11 6,11 C4.34,11 3,12.34 3,14 C3,15.66 4.34,17 6,17 C6.79,17 7.5,16.69 8.04,16.19 L15.16,20.35 C15.11,20.56 15.08,20.78 15.08,21 C15.08,22.61 16.39,23.92 18,23.92 C19.61,23.92 20.92,22.61 20.92,21 C20.92,19.39 19.61,18.08 18,18.08 L18,18.08 Z" id="Shape" fill="#658FC7"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

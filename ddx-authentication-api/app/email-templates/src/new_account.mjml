@@ -1,0 +1,53 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-text font-weight="300" font-size="16px" color="#616161" line-height="24px"></mj-text>
+      <mj-section padding="0px"></mj-section>
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column width="100%">
+        <mj-image href="https://www.qlaym.com" src="https://qlaym.com/wp-content/themes/qlaym_2019_theme/assets/gfx/qlaym.gif"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column width="100%">
+        <mj-text align="center">Your new account has been created.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column width="45%">
+        <mj-text align="center" font-weight="500" padding="0px" font-size="18px">Welcome!</mj-text>
+        <mj-divider border-width="2px" border-color="#616161"></mj-divider>
+        <mj-divider border-width="2px" border-color="#616161" width="45%"></mj-divider>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-divider border-color="#555"></mj-divider>
+        <mj-text font-size="20px" color="#555" font-family="helvetica">{{ project_name }} - New Account</mj-text>
+        <mj-text font-size="16px" color="#555">From now on please login to your account using your email adsress and your password.</mj-text>
+        <mj-text font-size="16px" color="#555">Username: {{ username }}</mj-text>
+        <mj-button padding="50px 0px" href="{{ link }}">Go to App</mj-button>
+        <mj-divider border-color="#555" border-width="2px" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-table width="50px">
+          <tr style="list-style: none;line-height:1">
+            <td> <a href="https://twitter.com/qlaymcom">
+                  <img width="25" src="https://cdn.recast.ai/newsletter/twitter.png" />
+                </a> </td>
+            <td> <a href="https://www.facebook.com/qlaym/">
+                  <img width="25" src="https://cdn.recast.ai/newsletter/facebook.png" />
+                </a> </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

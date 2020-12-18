@@ -1,0 +1,108 @@
+@import 'src/styles/02-tools/index.scss';
+
+.button {
+
+
+.spinner > div {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(255, 255, 255);
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  20% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(0.7);
+  }
+}
+  
+
+  &.primary,
+  &.ghost {
+    @include shadow(0, 1.8rem, 3rem, 0, rgba(181,199,211,0.57));
+    @include radius(25px);
+  }
+
+  &.primary {
+    background-color: var(--pri-col1);
+    color: white;
+  }
+
+  &.ghost {
+    background-color: white;
+    border: 1px solid var(--pri-col1);
+    color: var(--pri-col1);
+  }
+
+  &.link {
+    background-color: transparent;
+    color: var(--acc-col0);
+    padding: 0 0 3px 0 !important;
+    font-size: 1.2rem;
+    border-bottom: 1px solid transparent;
+  }
+
+  &.sm {
+    padding: 1.2rem 5.4rem;
+  }
+
+  &.md {
+    padding: 1.9rem 7rem;
+  }
+
+  &.lg {
+    padding: 1.9rem 12.5rem;
+  }
+
+  &:hover:not(:disabled){
+    cursor: pointer;
+
+    &.primary,
+    &.ghost {
+      color: var(--acc-col0);
+    }
+    
+    &.link {
+      border-color: var(--acc-col0);
+    }
+  }
+
+  &:disabled {
+    &.primary {
+      background-color: var(--pri-col3);
+    }    
+
+    &.ghost {
+      color: var(--pri-col3);
+      border-color: var(--pri-col3);
+    }
+
+    &.link {
+      border-color: var(--pri-col3);
+      color: var(--pri-col3);
+    }
+  }
+}

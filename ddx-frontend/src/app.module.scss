@@ -1,0 +1,18 @@
+@import 'src/styles/02-tools/index.scss';
+
+.gridContainer {
+  @include grid();
+  @include grid-template-columns(1fr 1fr 94rem 1fr 1fr);
+  @include grid-template-rows(15rem 1fr);
+  grid-template-areas: 
+    ". . header . ."
+    ". . main . .";
+}
+
+.gridHeader {
+  grid-area: header;
+}
+
+.gridMain {
+  grid-area: main;
+}

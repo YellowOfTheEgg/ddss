@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  ddxbackend:
+    container_name: 'ddxbackend'
+    build:
+      context: .
+    image: 'qlaym/dxxbackend:newest'
+    command: sh run.sh
+    environment:
+      - ORIGINS=*
+    ports:
+      - 8002:8002
+    volumes:
+      - '.:/usr/src/app'
+    networks:
+      - 'ddx-api-network'  
+
+networks:
+  ddx-api-network:    
+    name: "ddx-api-network"

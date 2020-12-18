@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'PxGrotesk-Regular';
+  src: url('PxGrotesk-Regular.eot?#iefix') format('embedded-opentype'),  url('PxGrotesk-Regular.otf')  format('opentype'),
+	     url('PxGrotesk-Regular.woff') format('woff'), url('PxGrotesk-Regular.ttf')  format('truetype'), url('PxGrotesk-Regular.svg#PxGrotesk-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,23 @@
+# Core
+fastapi==0.54.1 # web framework for building APIs
+uvicorn==0.6.1 # ASGI server
+gunicorn==19.9.0 # WSGI HTTP Server
+werkzeug==0.16.1 # collection of various utilities for WSGI applications
+python-multipart==0.0.5 # streaming multipart parser
+tenacity==6.1.0 # Retrying library for Python
+
+# Security
+PyJWT==1.7.1 # JSON Web Token implementation in Python
+passlib==1.7.2 # password hashing library
+bcrypt==3.1.7 # password hashing
+python-jose==3.1.0 # to encrypt and/or sign content using a variety of algorithms
+
+# Testing and QA
+pytest==3.7.4 # library for testing
+pytest-flask==0.11.0
+pytest-cov==2.6.0 # for coverage reports
+codecov==2.0.15 # coverage badge for readme file
+
+# Logging
+python-logstash==0.4.6 # logstash handler and formatter
+pyyaml==5.1 # processing yaml files

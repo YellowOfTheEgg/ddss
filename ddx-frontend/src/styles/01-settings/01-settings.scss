@@ -1,0 +1,23 @@
+:root {
+  /* 
+    62.5% of 16px (browser font-size) = 10px = 1rem 
+    This defines what 1rem is.
+  */
+  --font-size: 62.5%;
+  --font-color-default: var(--pri-col0);
+
+  // Primary colors
+  --pri-col0: #0b3961;
+  --pri-col1: #0f4c81;
+  --pri-col2: #658fc7;
+  --pri-col3: #b5c7d3;
+  --pri-col4: #9db8d8;
+
+  // Accent colors
+  --acc-col0: #e8a188;
+  --acc-col2: #C75A65;
+
+  // Notification colors
+  --notif-col0: #9e464f;
+  --notif-col1: #52968C;
+}

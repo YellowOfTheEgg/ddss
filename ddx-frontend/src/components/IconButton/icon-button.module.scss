@@ -1,0 +1,45 @@
+@import 'src/styles/02-tools/index.scss';
+
+.iconButton {
+  position: relative;
+  background-color: transparent;
+  &:hover {
+    cursor: pointer;
+  }
+
+  .label {
+    @include hide()
+  }
+
+  // ICON
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    @include radius(100px);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &.md {
+    width: 3.6rem;
+    height: 3.6rem;
+    &::before {
+      width: 3.6rem;
+      height: 3.6rem;
+      background-size: 3.6rem auto;
+    }
+  }
+  
+  &.download::before {
+    background-image: url("../../styles/icons/Icon_Button_download.svg");
+  }
+
+  &.share::before {
+    background-image: url("../../styles/icons/Icon_Button_share.svg");
+  }
+}

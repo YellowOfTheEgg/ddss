@@ -1,0 +1,76 @@
+@import 'src/styles/02-tools/index.scss';
+
+.stepper {
+  @include flex();
+  @include flex-justify-content(space-between);
+  padding: 6rem 0 1rem 0;
+
+  .step {
+    position: relative;
+    width: 100%;
+    @include flex();
+    @include flex-justify-content(center);
+
+    &::before, 
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: 50%;
+      top: -2.2rem;
+      background-color: var(--acc-col0);
+      z-index: -1000;
+    }
+    &::before {
+      right: 50%;
+      margin-right: 1.8rem;
+    }
+    &::after {
+      left: 50%;
+      margin-left: 1.8rem;
+    }
+
+    &:first-child::before {
+      content: none;
+    }
+
+    &:last-child::after {
+      content: none;
+    }
+
+    .stepTitle {
+      position: relative;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      letter-spacing: 3px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1.5rem;
+        height: 1.5rem;
+        @include radius(50%);
+        border: 1px solid var(--acc-col0);
+        text-align: center;
+        margin: 0 auto 1rem auto;
+        
+      }
+    }
+
+    &.todo {
+      .stepTitle::before {
+        background-color: white;
+      }
+    }
+
+    &.done {
+      .stepTitle::before {
+        background-color: var(--acc-col0);
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+
+  ddx-api-gateway:
+    container_name: ddx-api-gateway
+    environment:
+      - INTEGRATION_TESTS=True
+    build:
+      context: .
+    image: qlaym/ddx-api-gateway:newest
+    command: sh run.sh
+    ports:
+      - 8000:8000
+    env_file:
+      - .env
+    volumes:
+      - '.:/usr/src/app'
+    networks:
+      - ddx-api-network
+
+networks:
+  ddx-api-network:
+    name: "ddx-api-network"
+    external: true
+

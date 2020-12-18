@@ -1,0 +1,23 @@
+@import 'src/styles/02-tools/index.scss';
+
+.tabs {
+  .navList {
+    @include flex();
+    @include flex-justify-content(center);
+    @include flex-align-items(center);
+  }
+  .tabItem {
+    flex: 1;
+    text-align: center;
+    border-bottom: 2px solid var(--pri-col3);
+    line-height: 3rem;
+    &:hover {
+      cursor: pointer;
+    }
+  
+    &.active {
+      border-bottom: 2px solid var(--acc-col0);
+    }
+  }
+}
+

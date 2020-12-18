@@ -1,0 +1,86 @@
+@import 'src/styles/02-tools/index.scss';
+
+.inputText {
+  margin-bottom: 2rem;
+  width: 100%;
+  .label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .input {
+    width: 100%;
+    border: 1px solid var(--pri-col3);
+    color: var(--pri-col0);
+    padding: 1rem 1.5rem;
+    @include radius(4px);
+    &::placeholder {
+      color: var(--pri-col3);
+    }
+  }
+  .error {
+    color: var(--acc-col0);
+    padding: 1rem 0;
+  }
+}
+
+.radioGroup {
+  margin-bottom: 3rem;
+  .legend {
+    margin-bottom: 2rem;
+  }
+  .options {
+    @include flex();
+
+    &>*:not(:first-child) {
+      margin-left: 3rem;
+    }
+  }
+  .label {
+    display: block;
+    position: relative;
+    margin: 0 0 1rem 3rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -25px;
+      width: 20px;
+      height: 20px;
+      border: 3px solid var(--acc-col0);
+      @include radius(100%);
+    }
+  }
+  .input {
+    @include hide();
+  }
+  .input:checked ~ .label{
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -20px;
+      width: 10px;
+      height: 10px;
+      background-color: var(--acc-col0);
+      @include radius(100px);
+    }
+  }
+  .error {
+    color: var(--acc-col0);
+    padding: 1rem 0;
+  }
+}
+
+.select {
+  margin-bottom: 3rem;
+  .legend {
+    margin-bottom: 2rem;
+  }
+  .selectField {
+    width: 100%;
+  }
+  .error {
+    color: var(--acc-col0);
+    padding: 1rem 0;
+  }
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="68px" viewBox="0 0 65 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>button_Woman_active</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-61.4%" y="-61.4%" width="222.7%" height="222.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="1" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.396078431   0 0 0 0 0.560784314   0 0 0 0 0.780392157  0 0 0 0.56326486 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <circle id="path-2" cx="21.6" cy="21.6" r="21.6"></circle>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="button_Woman_active">
+            <g>
+                <g id="Group-2">
+                    <g id="Colors/Brand/sec-col1" fill="#FFFFFF">
+                        <rect id="-" x="0" y="0" width="64" height="64"></rect>
+                    </g>
+                    <g id="Group" transform="translate(9.500000, 10.500000)">
+                        <g id="Button/dowload-Copy-2">
+                            <g id="Button/Add/default-Copy-2">
+                                <g id="Group" filter="url(#filter-1)">
+                                    <mask id="mask-3" fill="white">
+                                        <use xlink:href="#path-2"></use>
+                                    </mask>
+                                    <use id="Oval" fill="#FCFCFC" fill-rule="nonzero" xlink:href="#path-2"></use>
+                                    <g id="Colors/Brand/main-col1" mask="url(#mask-3)">
+                                        <g transform="translate(-7.200000, -7.200000)" id="Rectangle">
+                                            <polygon points="0 0 57.6 0 57.6 57.6 0 57.6"></polygon>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group-10" transform="translate(10.000000, 16.000000)">
+                    <g id="Group">
+                        <g id="ic_face" transform="translate(4.743372, 0.000000)">
+                            <g id="Icon-24px">
+                                <path d="M12.1343631,15.7957386 C11.2040619,15.7957386 10.4490349,16.5485568 10.4490349,17.4761364 C10.4490349,18.4037159 11.2040619,19.1565341 12.1343631,19.1565341 C13.0646643,19.1565341 13.8196913,18.4037159 13.8196913,17.4761364 C13.8196913,16.5485568 13.0646643,15.7957386 12.1343631,15.7957386 L12.1343631,15.7957386 Z M20.2239385,15.7957386 C19.2936373,15.7957386 18.5386103,16.5485568 18.5386103,17.4761364 C18.5386103,18.4037159 19.2936373,19.1565341 20.2239385,19.1565341 C21.1542397,19.1565341 21.9092667,18.4037159 21.9092667,17.4761364 C21.9092667,16.5485568 21.1542397,15.7957386 20.2239385,15.7957386 L20.2239385,15.7957386 Z M16.1791508,2.68863636 C8.73674144,2.68863636 2.69652514,8.71118182 2.69652514,16.1318182 C2.69652514,23.5524545 8.73674144,29.575 16.1791508,29.575 C23.6215602,29.575 29.6617765,23.5524545 29.6617765,16.1318182 C29.6617765,8.71118182 23.6215602,2.68863636 16.1791508,2.68863636 L16.1791508,2.68863636 Z M16.1791508,26.8863636 C10.2333129,26.8863636 5.39305027,22.0602614 5.39305027,16.1318182 C5.39305027,15.7419659 5.42001552,15.3521136 5.4604634,14.9757045 C8.64236306,13.5641705 11.1636141,10.9696364 12.4849114,7.75671591 C14.9252666,11.1981705 18.9430891,13.4431818 23.4867339,13.4431818 C24.5383787,13.4431818 25.5495757,13.3221932 26.5203247,13.0936591 C26.8034598,14.048125 26.9652514,15.0698068 26.9652514,16.1318182 C26.9652514,22.0602614 22.1249887,26.8863636 16.1791508,26.8863636 L16.1791508,26.8863636 Z" id="Shape" fill="#658FC7"></path>
+                                <polyline id="Shape" points="0 0 32.3583016 0 32.3583016 32.2636364 0 32.2636364"></polyline>
+                            </g>
+                        </g>
+                        <polygon id="Triangle" fill="#658FC7" transform="translate(6.694112, 15.024976) rotate(54.000000) translate(-6.694112, -15.024976) " points="6.64201448 10.3259636 11.3970282 19.7239893 1.99119631 19.6718915"></polygon>
+                        <polygon id="Triangle-Copy" fill="#658FC7" transform="translate(35.309215, 14.395398) scale(-1, 1) rotate(54.000000) translate(-35.309215, -14.395398) " points="35.2571176 9.69638477 40.0121313 19.0944104 30.6062994 19.0423126"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

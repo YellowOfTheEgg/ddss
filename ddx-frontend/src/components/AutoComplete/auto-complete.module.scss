@@ -1,0 +1,80 @@
+@import 'src/styles/02-tools/index.scss';
+
+.autoComplete {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 3rem;
+    height: 3rem;
+    background-size: 3rem auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("../../styles/icons/lupe.svg");
+  }
+  input {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 1.5rem 1.5rem 5rem;
+    border: 1px solid var(--pri-col2);
+    color: var(--pri-col0);
+    @include radius(4px);
+  }
+  input::placeholder {
+    color: var(--pri-col3);
+  }
+
+  .clear {
+    position: absolute;
+    top: .6rem;
+    right: 5rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 10px;
+      width: 2rem;
+      height: 2rem;
+      background-size: 2rem auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url("../../styles/icons/close.svg");
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.suggestions {
+  position: absolute;
+  z-index: 1000;
+  top: 3.3rem;
+  left: 0;
+  border: 1px solid var(--pri-col2);
+  background-color: white;
+  width: 100%;
+  list-style: none;
+  margin: 2rem 0 0 0;
+  padding: 0;
+  cursor: default;  
+  @include radius(4px);
+
+  li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: none;
+    padding: 1rem 5rem;
+  }
+  
+  li:focus,
+  .active {
+    background-color: var(--pri-col2);
+    color: white;
+  }
+}

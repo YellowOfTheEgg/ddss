@@ -1,0 +1,304 @@
+@import 'src/styles/02-tools/index.scss';
+
+.symptomChecker {
+  position: relative;
+
+  .backButton {
+    position: absolute;
+    top:-3rem;
+    left: 2rem;
+    color: var(--acc-col0);
+    &:hover {
+      cursor: pointer;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: .3rem;
+      left: -1.5rem;
+      border: solid var(--acc-col0);
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 5px;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+//---------------------BASIC INFO------------------------------------
+
+.basicInfo {
+  h1 {
+    margin: 4rem 0 8rem 0;
+    
+  }
+  .form {
+    .sexRadioGroup {
+      margin-bottom: 3rem;
+      position: relative;
+      .legend {
+        margin-bottom: 2rem;
+      }
+      .options {
+        @include flex();
+        margin-bottom: 4rem;
+        &>*:not(:first-child) {
+          margin-left: 3rem;
+        }
+      }
+      .label {
+        position: absolute;
+        top: 3rem;
+        width: 5rem;
+        height: 5rem;
+        background-size: 5rem auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        &[for="sex_female"] {
+          left: 0rem;
+          background-image: url("../../styles/icons/button_Woman.svg");
+          &:hover {
+            background-image: url("../../styles/icons/button_Woman_hover.svg");
+          }
+        }
+        &[for="sex_male"] {
+          left: 8rem;
+          background-image: url("../../styles/icons/button_Man.svg");
+          &:hover {
+            background-image: url("../../styles/icons/button_Man_hover.svg");
+          }
+        }
+      }
+      .input {
+        @include hide();
+      }
+      .input:checked ~ .label[for="sex_female"] {
+        background-image: url("../../styles/icons/button_Woman_active.svg");
+      }
+      .input:checked ~ .label[for="sex_male"] {
+        background-image: url("../../styles/icons/button_Man_active.svg");
+      }
+      .error {
+        color: var(--acc-col0);
+        padding: 1rem 0;
+      }
+    }
+  }
+  .navButtons {
+    margin-top: 5rem;
+    @include flex();
+    @include flex-justify-content(center);
+    &>*:not(:first-child) {
+      margin-left: 2rem;
+    }
+  }
+}
+
+//---------------------SYMPTOMS INPUT--------------------------------
+.symptomsInput {
+  padding: 2.4rem 1.2rem 1.2rem 1.2rem;
+  color: var(--pri-col0);
+  line-height: 2.4rem;
+
+  h1 {
+    margin: 0rem 0 6rem 0;
+    text-align: center;
+  }
+
+  .card {
+    @include flex();
+    @include flex-direction(column);
+    .message {
+      margin-bottom: 4rem;
+    }
+    .question{
+      margin-bottom: 4rem;
+      font-weight: bold;
+    }
+    .clearBtn {
+      @include flex-alignself(flex-end);
+      margin: 2rem 0 2rem 0;
+    }
+
+    .symptomsContainer {
+      min-height: 10rem;
+    }
+
+    .symptomsList {
+      @include flex();
+      @include flex-justify-content(flex-start);
+      @include flex-align-items(flex-start);
+      @include flex-wrap(wrap);
+
+      .symptom {
+        @include flex-set(0, 0, auto);
+        @include flex-alignself(flex-start);
+        display: block;
+        border-radius: 16px;
+        padding: .5rem 2rem .5rem 2rem;
+        min-width: 1rem;
+        margin: 1rem;
+        background-color: var(--pri-col2);
+        color: white;
+
+        .removeSymptom {
+          position: relative;
+          display: inline-block;
+          margin-left: 1rem;
+          cursor: pointer;
+          width: 1rem;
+          height: 1rem;
+          
+          &::before, &::after {
+            content: '';
+            position: absolute;
+            height: .2rem;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            margin-top: -1px;
+            background: white;
+          }
+          &::before {
+            transform: rotate(45deg);
+          }
+          &::after {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .navButtons {
+    margin-top: 5rem;
+    @include flex();
+    @include flex-justify-content(center);
+    &>*:not(:first-child) {
+      margin-left: 2rem;
+    }
+  }
+}
+
+
+//---------------------SUMMARY--------------------------------
+.summary {
+  @include flex();
+  @include flex-direction(column);
+
+  &>:not(:first-child) {
+    margin-bottom: 4rem;
+  }
+
+  .header {
+    //@include flex();
+    @include flex-align-items(center);
+    @include flex-justify-content(space-between);
+    margin: 4rem 0;
+    width: 100%;
+    h1 {
+      position: relative;
+      margin-left: 0rem;
+      text-align: center;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -4.5rem;
+        left: -15rem;
+       // z-index: 100;
+        width: 15rem;
+        height: 15rem;
+        background-size: 15rem auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+      &.female::before {
+        background-image: url("../../styles/icons/Icon_Woman_128.svg");
+      }
+      &.male::before {
+        background-image: url("../../styles/icons/Icon_Man_128.svg");
+      }
+    }
+
+    .iconButtons {
+      padding: 0 3.2rem 0 3.2rem;
+      &>:first-child {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  .basicInfo {
+    margin-left: 4rem;
+    @include grid();
+    @include grid-template-rows(repeat(5, 1fr));
+    @include grid-auto-flow(column);
+    grid-auto-columns: max-content;
+    grid-row-gap: 2rem;
+    grid-column-gap: 6rem;
+    
+    li {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        width: .6rem;
+        height: .6rem;
+        top: .7rem;
+        left: -1.6rem;
+        @include radius(100%);
+        background-color: var(--acc-col0);
+      }
+    }
+  }
+
+  .symptoms {
+    //margin-left: 20rem;
+   // text-align: center;
+   // position: relative;
+    @include grid();
+    @include grid-template-rows(repeat(5, 1fr));
+    @include grid-auto-flow(column);
+    grid-auto-columns: max-content;
+    grid-row-gap: 2rem;
+    grid-column-gap: 6rem;
+
+    li {
+      position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        top: .4rem;
+        left: -2.2rem;
+        border-style: solid;
+        border-width: 0 .7rem .7rem 0;
+        border-color: transparent var(--acc-col0)  transparent transparent;
+    }
+    }
+  }
+
+  .diagnoses {
+    .list {
+      @include flex();
+      @include flex-direction(column);
+      @include flex-align-items(center);
+
+      &>:first-child {
+        margin-top: 4rem;
+      }
+
+      &>:not(:first-child) {
+        margin-top: .8rem;
+      }
+    }
+  }
+
+  .buttonContainer {
+    @include flex();
+    @include flex-justify-content(center);
+  }
+}

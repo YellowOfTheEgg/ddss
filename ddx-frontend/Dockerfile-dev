@@ -1,0 +1,12 @@
+FROM node:12.14
+
+WORKDIR /usr/src/app
+
+ENV PATH $PATH:/usr/src/app/node_modules/.bin
+
+COPY package*.json ./
+RUN npm ci
+
+COPY . .
+
+CMD [ "npm", "start" ]

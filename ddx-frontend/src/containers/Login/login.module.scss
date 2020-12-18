@@ -1,0 +1,107 @@
+@import 'src/styles/01-settings/index.scss';
+@import 'src/styles/02-tools/index.scss';
+
+.background{
+    //min-width: 960px;
+    height: 100vh;  
+   
+    background-color: var(--pri-col4);
+   
+}
+
+input{
+  border:none;
+  border-bottom:1px solid var(--pri-col3);
+  width:100%;
+  margin-bottom:40px;
+  font-size: 15px;
+  color: var(--pri-col1)
+  
+}
+::placeholder{
+  color:var(--pri-col3);
+}
+
+input:focus{ 
+  outline: none;
+}
+
+h1{
+  font-size:60px;
+  color: var(--pri-col2);
+  margin-left:60px;
+  padding-top:40px; 
+}
+h3{
+  font-size:20px;
+  color: var(--pri-col0);
+  margin-left:60px;
+  margin-bottom:60px;
+  margin-top:20px;
+}
+h2{
+  font-size:'25px';
+  color:var(--pri-col0);
+  text-align:center;
+  margin-bottom: 20px;
+}
+
+
+.loginBox{
+  background-color:white;
+  width:30%;
+  margin-bottom: 60px;
+  min-width:200px;
+  max-width:350px;
+  margin-left: 60px;
+  box-shadow: 4px 4px 6px #e6eaef;
+  border-radius:6px;
+  padding:30px; 
+}
+
+.formArea{
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:60px;
+  width:100%;
+}
+
+p{
+  font-size:15px;
+  color:var(--pri-col0);
+  text-align:center;
+}
+p.error{
+  color: var(--acc-col0);
+  font-size: 13px;
+}
+p.success{
+  color: var(--notif-col1);
+  font-size: 13px;
+}
+
+.backgroundImage{   
+  width:100%;
+  height: 100%;
+  max-height: 1024px;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-image: url(../../styles/img/background.svg)
+}
+
+.link{
+  color:var(--acc-col0); 
+  font-size:13px;  
+  text-decoration: none;
+  background: none!important;
+  border:none; 
+  padding:0!important;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .link {
+    padding:5px!important;
+      float: none!important;
+  }
+}

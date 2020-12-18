@@ -1,0 +1,53 @@
+version: '3.5'
+
+services:
+
+  ddx-authentication-api:
+    container_name: ddx-authentication-api    
+    environment:
+      - SERVER_HOST=http://localhost:8001/api/v1
+      - INTEGRATION_TESTS=True
+    build:
+      context: .
+    image: qlaym/ddx-authentication-api:newest
+    command: sh run.sh
+    env_file:
+      - .env
+    ports:
+      - 8001:8001
+    volumes:
+      - '.:/usr/src/app'
+    networks:
+      - ddx-api-network
+    
+  db:
+    container_name: ddx-db
+    image: postgres:12
+    env_file:
+      - .env
+    ports:
+      - 5432:5432
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    networks:
+      - ddx-api-network
+    healthcheck:
+      test: pg_isready
+      
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 5050:5050
+    depends_on:
+      - db
+    logging:
+      driver: none
+    env_file:
+      - .env
+    networks:
+      - ddx-api-network
+
+networks:
+  ddx-api-network:    
+    name: "ddx-api-network"
+

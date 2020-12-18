@@ -1,0 +1,67 @@
+// Grid
+//
+// Sass @mixin's for CSS grid properties. Guide: https://css-tricks.com/snippets/css/complete-guide-grid/
+//
+// Styleguide: tools.grid
+
+// Grid Container
+//
+// Container mixins
+//
+// Styleguide: tools.grid.container
+
+// grid()
+//
+// Styleguide: tools.grid.container.1-grid
+@mixin grid() {
+  display:                      -ms-grid;
+  display:                      grid;
+}
+
+// grid-inline()
+//
+// Styleguide: tools.grid.container.2-grid-inline
+@mixin grid-inline() {
+  display:                      -ms-inline-grid;
+  display:                      inline-grid;
+}
+
+// grid-template-columns($values)
+//
+// Styleguide: tools.grid.container.3-grid-template-columns
+@mixin grid-template-columns($values) {
+  -ms-grid-columns:             $values;
+  grid-template-columns:        $values;
+}
+
+// grid-template-rows($values)
+//
+// Styleguide: tools.grid.container.4-grid-template-rows
+@mixin grid-template-rows($values) {
+  -ms-grid-template-rows:       $values;
+  grid-template-rows:           $values;
+}
+
+// grid-gap($value)
+//
+// A shorthand for grid-row-gap and grid-column-gap
+//
+// Styleguide: tools.grid.container.5-grid-gap
+@mixin grid-gap($value) {
+  grid-gap:                     $value;
+  gap:                          $value;
+}
+
+// grid-auto-flow($method)
+//
+// Styleguide: tools.grid.container.6-grid-auto-flow
+@mixin grid-auto-flow($method) {
+  -ms-grid-auto-flow:           $method;
+  grid-auto-flow:               $method;
+}
+
+// Grid Items
+//
+// Item mixins
+//
+// Styleguide: tools.grid.items
